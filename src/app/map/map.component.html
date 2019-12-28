@@ -1,0 +1,14 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd"
+      xmlns:maps="nativescript-google-maps-sdk">
+<ActionBar>
+    <Label text="Where we are"></Label>
+</ActionBar>
+
+<GridLayout>
+    <maps:mapView
+        [zoom]="16"
+        [latitude]="-29.354363"
+        [longitude]="31.292114"
+        (mapReady)="onMapReady($event)" />
+</GridLayout>
+</Page>
