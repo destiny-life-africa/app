@@ -1,9 +1,11 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd"
       xmlns:maps="nativescript-google-maps-sdk">
-<ActionBar>
-    <Label text="Where we are"></Label>
-</ActionBar>
-
+<ActionBar title="Where we are">
+    <GridLayout rows="40" columns="40 *">
+      <Image row="0" col="0" src="~/images/icon.png" ></Image>
+      <Label row="0" col="1" text="Where we are"></Label>
+    </GridLayout>
+  </ActionBar>
 <GridLayout>
     <maps:mapView
         [zoom]="16"

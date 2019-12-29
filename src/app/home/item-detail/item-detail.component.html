@@ -1,8 +1,20 @@
 <ActionBar>
     <NavigationButton (tap)="onBackTap()" android.systemIcon="ic_menu_back"></NavigationButton>
-    <Label [text]="item.name"></Label>
+    <Label  [text]="series"></Label>
 </ActionBar>
 
 <GridLayout>
-    <Label class="m-10 h3" verticalAlignment="top" [text]="item.description"></Label>
+    <ScrollView>
+        <StackLayout>
+            <ListView height="150" [items]="sermons">
+                <ng-template let-sermon="item" let-i="index" >
+                    <Label [id]="'lbl' + i"  row="0" col="1" [text]="sermon.name"  (tap)="rowSelect(sermon, $event)"></Label>
+                    <!-- <GridLayout rows="40" columns="80 auto">
+                        <Label [id]="'lbl' + i"  row="0" col="1" [text]="sermon.name"></Label>
+                        <Button  row="0" col="0" text="Play"  class="my-button"></Button>
+                    </GridLayout> -->
+                </ng-template>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
 </GridLayout>

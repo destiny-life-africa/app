@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { DataService, DataItem } from "../shared/data.service";
+import { DataService } from "../shared/data.service";
 // import { TNSPlayer } from 'nativescript-audio-player';
 
 @Component({

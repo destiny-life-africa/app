@@ -1,24 +1,21 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { RouterExtensions } from "nativescript-angular/router";
-import { DataService, DataItem } from "../../shared/data.service";
 import { TNSPlayer } from 'nativescript-audio-player';
 @Component({
     selector: "Sermon",
     templateUrl: "./sermon.component.html"
 })
 export class SermonComponent implements OnInit {
-    item: DataItem;
+
     private _player: TNSPlayer;
     constructor(
-        private _data: DataService,
         private _route: ActivatedRoute,
         private _routerExtensions: RouterExtensions
     ) { }
 
     ngOnInit(): void {
         const id = +this._route.snapshot.params.id;
-        this.item = this._data.getItem(id);
         this._player = new TNSPlayer();
         this._player.debug = true; // set true to enable TNSPlayer console logs for debugging.
         this._player
