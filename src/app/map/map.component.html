@@ -1,16 +1,36 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd"
-      xmlns:maps="nativescript-google-maps-sdk">
-<ActionBar title="Where we are">
+<Page xmlns="http://www.nativescript.org/tns.xsd" xmlns:maps="nativescript-google-maps-sdk">
+  <ActionBar title="Locations">
     <GridLayout rows="40" columns="40 *">
-      <Image row="0" col="0" src="~/images/icon.png" ></Image>
-      <Label row="0" col="1" text="Where we are"></Label>
+      <Image row="0" col="0" src="~/images/icon.png"></Image>
+      <Label row="0" col="1" text="Locations"></Label>
     </GridLayout>
   </ActionBar>
-<GridLayout>
-    <maps:mapView
-        [zoom]="16"
-        [latitude]="-29.354363"
-        [longitude]="31.292114"
-        (mapReady)="onMapReady($event)" />
-</GridLayout>
+  <ScrollView orientation="vertical">
+    <StackLayout>
+      <GridLayout columns="auto,auto" rows="auto" horizontalAlignment="center" verticalAlignment="top"
+        backgroundColor="lightgray">
+        <Image row="0" col="0" left="10" top="10" src="~/images/stanger_location.png"></Image>
+        <Image row="0" col="1" left="410" top="10" src="~/images/swakopmund_location.png"></Image>
+      </GridLayout>
+      <Label text="Stanger"></Label>
+      <maps:mapView [zoom]="16" height="300"  [latitude]="-29.354363" [longitude]="31.292114" (mapReady)="onMapReady($event)" />
+      <Label text="Swakopmund"></Label>
+      <GridLayout columns="auto,auto,auto" rows="auto" horizontalAlignment="center" verticalAlignment="top"
+        backgroundColor="lightgray">
+        <GridLayout row="0" col="0" rows="auto,auto" columns="auto" width="100">
+          <Image src="font://&#xf002;" class="fas t-36"></Image>
+          <Label row="1" col="0" text="Tel: 081 224 9597"></Label>
+        </GridLayout>
+        <GridLayout row="0" col="1" rows="auto,auto" columns="auto" width="100">
+          <Image src="font://&#xf002;" class="fas t-36"></Image>
+          <Label row="1" col="0" textWrap="true" text="MAIN HALL, NAMIB HIGH SCHOOL, LUDERITZ STREET, SWAKOPMUND, NAMIBIA"></Label>
+        </GridLayout>
+        <GridLayout row="0" col="2" rows="auto,auto" columns="auto" width="100">
+          <Image src="font://&#xf002;" class="fas t-36"></Image>
+          <Label row="1" col="0" text="info@destinylife.co.za"></Label>
+        </GridLayout>
+      </GridLayout>
+      <maps:mapView [zoom]="16" height="300"  [latitude]="-22.6763716" [longitude]="14.5295199" (mapReady)="onMapReady($event)" />
+    </StackLayout>
+  </ScrollView>
 </Page>
