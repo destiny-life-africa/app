@@ -6,10 +6,15 @@ import { NativeScriptRouterModule } from "nativescript-angular/router";
 const routes: Routes = [
     {
         path: "",
-        redirectTo: "/(homeTab:home/default//browseTab:browse/default//searchTab:search/default//aboutTab:about/default//mapTab:map/default)",
+        redirectTo: "/(welcomeTab:welcome/default//homeTab:home/default//browseTab:browse/default//searchTab:search/default//aboutTab:about/default//mapTab:map/default)",
         pathMatch: "full"
     },
-
+    {
+        path: "welcome",
+        component: NSEmptyOutletComponent,
+        loadChildren: () => import("~/app/welcome/welcome.module").then((m) => m.WelcomeModule),
+        outlet: "welcomeTab"
+    },
     {
         path: "home",
         component: NSEmptyOutletComponent,
