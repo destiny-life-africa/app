@@ -7,7 +7,10 @@
             <Label style="color: black;" text="ABOUT US"></Label>
         </TabStripItem>
         <TabStripItem class="navigation__item">
-            <Label style="color: black;" text="Sermons"></Label>
+            <Label style="color: black;" text="LOCATIONS"></Label>
+        </TabStripItem>
+        <TabStripItem class="navigation__item">
+            <Label style="color: black;" text="SERMONS"></Label>
         </TabStripItem>
         <!-- <TabStripItem class="navigation__item">
             <Label text="Browse"></Label>
@@ -17,9 +20,7 @@
             <Label text="Search"></Label>
             <Image src="font://&#xf002;" class="fas t-36"></Image>
         </TabStripItem> -->
-        <TabStripItem class="navigation__item">
-            <Label style="color: black;" text="Locations"></Label>
-        </TabStripItem>
+
 
     </TabStrip>
     <TabContentItem>
@@ -27,6 +28,9 @@
     </TabContentItem>
     <TabContentItem>
         <page-router-outlet name="aboutTab"></page-router-outlet>
+    </TabContentItem>
+    <TabContentItem>
+        <page-router-outlet name="mapTab"></page-router-outlet>
     </TabContentItem>
     <TabContentItem>
         <page-router-outlet name="homeTab"></page-router-outlet>
@@ -39,8 +43,6 @@
     <!-- <TabContentItem>
         <page-router-outlet name="searchTab"></page-router-outlet>
     </TabContentItem> -->
-    <TabContentItem>
-        <page-router-outlet name="mapTab"></page-router-outlet>
-    </TabContentItem>
+
 
 </BottomNavigation>

@@ -31,10 +31,26 @@ export class HomeComponent implements OnInit {
 
     ngOnInit(): void {
         this._itemService.getSeries().subscribe((data: any) => {
+            data.forEach((item: any) => {
+                const t = this.camelize(item.name);
+                item.name = t;
+                console.log(item.name);
+            });
             this.items = data;
         });
     }
-
+    camelize(text) {
+        const array = text.split(' ');
+        let sentence = '';
+        array.forEach((word: any) => {
+            word = word ? word.charAt(0).toUpperCase() + word.substr(1).toLowerCase() : '';
+            sentence += ' ';
+            sentence += word;
+            console.log(word);
+         });
+        // text = text.replace(/[-_\s.]+(.)?/g, (_, c) => c ? c.toUpperCase() : ' ');
+        return sentence; // text.substr(0, 1).toLowerCase() + text.substr(1);
+    }
     // public togglePlay() {
     //     if (this._player.isAudioPlaying()) {
     //         this._player.pause();

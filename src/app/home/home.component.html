@@ -1,14 +1,16 @@
 <ActionBar title="Sermons">
     <GridLayout rows="40" columns="40 *">
-
-      <Label row="0" col="1" text="Sermons"></Label>
+        <Image row="0" col="0" src="~/images/icon.png"></Image>
     </GridLayout>
   </ActionBar>
-<GridLayout>
+<GridLayout style="background-color: #fff;">
     <ListView [items]="items">
         <ng-template let-item="item">
             <StackLayout>
-                <Label [nsRouterLink]="['../item', item.key]" [text]="item.name"></Label>
+                <Label
+                    style="color: black;"
+                    [nsRouterLink]="['../item', item.key]"
+                    [text]="item.name"></Label>
             </StackLayout>
         </ng-template>
     </ListView>
