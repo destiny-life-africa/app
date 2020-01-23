@@ -2,14 +2,105 @@
     <ActionBar title="Welcome">
         <GridLayout rows="40" columns="40 *">
             <Image row="0" col="0" src="~/images/icon.png"></Image>
-            <Label row="0" col="1" text="Welcome"></Label>
         </GridLayout>
     </ActionBar>
-    <StackLayout>
-        <Image row="0" src="~/images/welcome_3.jpg"></Image>
-        <Label row="1" textAlignment="center" textTransform="uppercase" text="REAL PEOPLE WHO LOVE DOING LIFE TOGETHER">
+    <ScrollView orientation="vertical">
+        <StackLayout style="background-color: #fff;">
+            <Image row="0" src="~/images/welcome_3.jpg"></Image>
+            <Label row="1" style="color: black;" textAlignment="center" textTransform="uppercase"
+                text="REAL PEOPLE WHO LOVE DOING LIFE TOGETHER">
+            </Label>
+            <Label row="2" style="color: black;" textAlignment="center" textTransform="uppercase" text="WELCOME HOME">
+            </Label>
+            <label row="3" style="color: black;" textAlignment="center" textTransform="uppercase"
+                text="TO KNOW JESUS CHRIST AND TO MAKE JESUS CHRIST KNOWN"></label>
+            <GridLayout row="4"
+                style="background-color: #F7F5F2; padding: 80px;"
+                columns="auto"
+                rows="auto, auto, auto, auto, auto, auto"
+                horizontalAlignment="center"
+                verticalAlignment="top">
+                <Image row="0" col="0" src="~/images/vision_grey.png"></Image>
+                <Label row="1" style="color: black;" textAlignment="center" textTransform="uppercase"
+                    text="OUR VISION">
+                </Label>
+                <Label row="2" style="color: black;" textAlignment="left"
+                    text="People of Impact">
+                </Label>
+                <Label row="3" style="color: black;" textAlignment="left"
+                    text="People of Influence">
+                </Label>
+                <Label row="4" style="color: black;" textAlignment="left"
+                    text="People of Increase">
+                </Label>
+            </GridLayout>
+
+            <GridLayout row="4"
+            style="background-color: #F7F5F2; padding: 80px; margin-top: 20px;"
+            columns="auto"
+            rows="auto, auto, auto, auto, auto"
+            horizontalAlignment="center"
+            verticalAlignment="top">
+            <Image row="0" col="0" src="~/images/mandate_grey.png"></Image>
+            <Label row="1" style="color: black;" textAlignment="center" textTransform="uppercase"
+                text="OUR MANDATE">
+            </Label>
+            <Label row="2" style="color: black;"
+                textAlignment="left"
+                textWrap="true"
+                text="Then Jesus came to them and said,
+“All authority in heaven and on
+earth has been given to me.
+Therefore go and make disciples
+of all nations, baptizing them
+in the name of the Father and
+of the Son and of the Holy
+Spirit, and teaching them to
+obey everything I have commanded
+you. And surely I am with you
+always, to the very end of the
+age.”">
+            </Label>
+            <Label row="3" style="color: black; font-weight: bold;" textAlignment="left"
+                text="-Matthew 28:18-20">
+            </Label>
+        </GridLayout>
+
+        <GridLayout row="4"
+        style="background-color: #F7F5F2; padding: 80px; margin-top: 20px;"
+        columns="auto"
+        rows="auto, auto, auto, auto, auto"
+        horizontalAlignment="center"
+        verticalAlignment="top">
+        <Image row="0" col="0" src="~/images/vision_grey.png"></Image>
+        <Label row="1" style="color: black;" textAlignment="center" textTransform="uppercase"
+            text="OUR FOUNDING SCRIPTURE">
         </Label>
-        <Label row="2" textAlignment="center" textTransform="uppercase" text="WELCOME HOME">
+        <Label row="2" style="color: black;"
+            textAlignment="left"
+            textWrap="true"
+            text="The Fellowship of the Believers
+They devoted themselves to the apostles’
+teaching and to fellowship, to the
+breaking of bread and to prayer.
+Everyone was filled with awe at the
+many wonders and signs performed by
+the apostles. All the believers were
+together and had everything in common.
+They sold property and possessions to
+give to anyone who had need. Every day
+they continued to meet together in the
+temple courts. They broke bread in their
+homes and ate together with glad and
+sincere hearts, praising God and enjoying
+the favor of all the people. And the Lord
+added to their number daily those who
+ were being saved.">
         </Label>
-    </StackLayout>
+        <Label row="3" style="color: black; font-weight: bold;" textAlignment="left"
+            text="-Acts 2:42-47">
+        </Label>
+    </GridLayout>
+        </StackLayout>
+    </ScrollView>
 </Page>

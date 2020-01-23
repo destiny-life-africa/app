@@ -1,65 +1,65 @@
 @import "~@nativescript/theme/core";
-@import "~@nativescript/theme/grey";
+@import '~@nativescript/theme/css/default.css';
 
 // Place any CSS rules you want to apply on both iOS and Android here.
 // This is where the vast majority of your CSS code goes.
 
 // Font icon class
-.fab {
-    font-family: "Font Awesome 5 Brands", "fa-brands-400";
-    font-weight: 400;
-}
+// .fab {
+//     font-family: "Font Awesome 5 Brands", "fa-brands-400";
+//     font-weight: 400;
+// }
 
-.fas {
-    font-family: "Font Awesome 5 Free", "fa-solid-900";
-    font-weight: 900;
-}
+// .fas {
+//     font-family: "Font Awesome 5 Free", "fa-solid-900";
+//     font-weight: 900;
+// }
 
-.far {
-    font-family: "Font Awesome 5 Free", "fa-regular-400";
-    font-weight: 400;
-}
+// .far {
+//     font-family: "Font Awesome 5 Free", "fa-regular-400";
+//     font-weight: 400;
+// }
 
 // Custom tabstrip item class
-.navigation__item {
-    &:active,
-    &:active Label {
-        @include colorize($contrasted-color: complementary background 20% 0%);
-    }
-}
+// .navigation__item {
+//     &:active,
+//     &:active Label {
+//         @include colorize($contrasted-color: complementary background 20% 0%);
+//     }
+// }
 
 // Common page class
-.page__content {
-    &-icon,
-    &-placeholder {
-        color: const(grey);
-        font-size: 20;
-        vertical-align: center;
-        horizontal-align: center;
-    }
+// .page__content {
+//     &-icon,
+//     &-placeholder {
+//         color: const(grey);
+//         font-size: 20;
+//         vertical-align: center;
+//         horizontal-align: center;
+//     }
 
-    &-icon {
-        font-size: 72;
-        vertical-align: top;
-        margin-top: 20%;
-    }
-}
-.selected {
-    background-color: #15fc00;
-}
-.unSelected {
-    background-color: #FFFFFF;
-}
-.my-button {
-    color: #395469;
-    background-color: #FFFFFF;
-    //background-image: url("https://play.nativescript.org/dist/assets/img/NativeScript_logo.png");
-    background-repeat: no-repeat;
-    background-position: 35 28;
-    background-size: 60 60;
-    border-width: 2;
-    border-color: #395469;
-    border-radius: 28;
-    height: 56;
-    font-size: 16;
-  }
+//     &-icon {
+//         font-size: 72;
+//         vertical-align: top;
+//         margin-top: 20%;
+//     }
+// }
+// .selected {
+//     background-color: #15fc00;
+// }
+// .unSelected {
+//     background-color: #FFFFFF;
+// }
+// .my-button {
+//     color: #395469;
+//     background-color: #FFFFFF;
+//     //background-image: url("https://play.nativescript.org/dist/assets/img/NativeScript_logo.png");
+//     background-repeat: no-repeat;
+//     background-position: 35 28;
+//     background-size: 60 60;
+//     border-width: 2;
+//     border-color: #395469;
+//     border-radius: 28;
+//     height: 56;
+//     font-size: 16;
+//   }

@@ -1,10 +1,13 @@
 <BottomNavigation>
     <TabStrip>
         <TabStripItem class="navigation__item">
-            <Label text="Welcome"></Label>
+            <Label style="color: black;" text="HOME"></Label>
         </TabStripItem>
         <TabStripItem class="navigation__item">
-            <Label text="Sermons"></Label>
+            <Label style="color: black;" text="ABOUT US"></Label>
+        </TabStripItem>
+        <TabStripItem class="navigation__item">
+            <Label style="color: black;" text="Sermons"></Label>
         </TabStripItem>
         <!-- <TabStripItem class="navigation__item">
             <Label text="Browse"></Label>
@@ -15,14 +18,15 @@
             <Image src="font://&#xf002;" class="fas t-36"></Image>
         </TabStripItem> -->
         <TabStripItem class="navigation__item">
-            <Label text="Locations"></Label>
+            <Label style="color: black;" text="Locations"></Label>
         </TabStripItem>
-        <TabStripItem class="navigation__item">
-            <Label text="Who we are"></Label>
-        </TabStripItem>
+
     </TabStrip>
     <TabContentItem>
         <page-router-outlet name="welcomeTab"></page-router-outlet>
+    </TabContentItem>
+    <TabContentItem>
+        <page-router-outlet name="aboutTab"></page-router-outlet>
     </TabContentItem>
     <TabContentItem>
         <page-router-outlet name="homeTab"></page-router-outlet>
@@ -38,7 +42,5 @@
     <TabContentItem>
         <page-router-outlet name="mapTab"></page-router-outlet>
     </TabContentItem>
-    <TabContentItem>
-        <page-router-outlet name="aboutTab"></page-router-outlet>
-    </TabContentItem>
+
 </BottomNavigation>
