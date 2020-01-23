@@ -1,18 +1,32 @@
 <ActionBar>
     <NavigationButton (tap)="onBackTap()" android.systemIcon="ic_menu_back"></NavigationButton>
-    <Label  [text]="series"></Label>
+    <Image row="0" col="1" src="~/images/icon.png"></Image>
+    <Label   style="color: black;"  [text]="series"></Label>
 </ActionBar>
-
-<GridLayout>
+<GridLayout style="background-color: #fff;">
     <ScrollView>
         <StackLayout>
             <ListView height="150" [items]="sermons">
                 <ng-template let-sermon="item" let-i="index" >
-                    <Label [id]="'lbl' + i"  row="0" col="1" [text]="sermon.name"  (tap)="rowSelect(sermon, $event)"></Label>
-                    <!-- <GridLayout rows="40" columns="80 auto">
-                        <Label [id]="'lbl' + i"  row="0" col="1" [text]="sermon.name"></Label>
-                        <Button  row="0" col="0" text="Play"  class="my-button"></Button>
-                    </GridLayout> -->
+                    <GridLayout
+                        (tap)="rowSelect(sermon, $event)"
+                        rows="40"
+                        columns="40 *"
+                        orientation="vertical">
+                        <Image row="0" col="0" src="https://img.icons8.com/ios-filled/50/000000/play.png"></Image>
+                        <label
+                            [id]="'lbl' + i"
+                            row="0" col="1"
+                            style="color: black;"
+                            [text]="sermon.name"
+
+                        ></label>
+                    </GridLayout>
+                    <!-- <Label [id]="'lbl' + i"
+                        style="color: black;"
+                        row="0" col="1"
+                        [text]="sermon.name"
+                        (tap)="rowSelect(sermon, $event)"></Label> -->
                 </ng-template>
             </ListView>
         </StackLayout>

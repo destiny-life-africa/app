@@ -22,24 +22,40 @@ export class ItemDetailComponent implements OnInit {
 
     ngOnInit(): void {
         const id = this._route.snapshot.params.id;
-        this.series = id.replace("-", " ");
+        this.series = this.camelize(id.replace("-", " "));
         this._data.getSermons(id).subscribe((data: any)=> {
              this.sermons = data;
         });
     }
-
+    camelize(text) {
+        const array = text.split(' ');
+        let sentence = '';
+        array.forEach((word: any) => {
+            word = word ? word.charAt(0).toUpperCase() + word.substr(1).toLowerCase() : '';
+            sentence += ' ';
+            sentence += word;
+            console.log(word);
+         });
+        return sentence;
+    }
     onBackTap(): void {
+        if(this._player) {
+            if (this._player.isAudioPlaying()) {
+                this._player.pause();
+            }
+        }
         this._routerExtensions.back();
     }
     rowSelect(item: any, $event: any) {
-        let lbl = $event.view;
-        lbl.backgroundColor = 'green';
+        let row = $event.view;
+
+        row.backgroundColor = '#CCCCCC';
         if (this.current) {
             if(this.current  !== item.name) {
                 this.current = item.name;
                 this.createPlayer(item.url);
                 setTimeout(() => {
-                    lbl.backgroundColor = 'blue';
+                    row.backgroundColor = '#F7F5F2';
                     this.togglePlay();
                 }, 5000);
             } else {
@@ -49,11 +65,10 @@ export class ItemDetailComponent implements OnInit {
             this.current = item.name;
             this.createPlayer(item.url);
             setTimeout(() => {
-                lbl.backgroundColor = 'blue';
+                row.backgroundColor = '#F7F5F2';
                 this.togglePlay();
             }, 5000);
         }
-        // console.log(item);
     }
     createPlayer(url: string) {
         this._player = new TNSPlayer();

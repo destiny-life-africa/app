@@ -48,8 +48,7 @@ export class HomeComponent implements OnInit {
             sentence += word;
             console.log(word);
          });
-        // text = text.replace(/[-_\s.]+(.)?/g, (_, c) => c ? c.toUpperCase() : ' ');
-        return sentence; // text.substr(0, 1).toLowerCase() + text.substr(1);
+        return sentence;
     }
     // public togglePlay() {
     //     if (this._player.isAudioPlaying()) {
