@@ -6,6 +6,7 @@ param(
 )
 
 $Key = $Env:CHURCH;
+tns platform clean android;
 if('Release' -eq $Type){
     $Path = "$PSScriptRoot\App_Resources\Android\src\main\AndroidManifest.xml";
     $APK = "$PSScriptRoot\platforms\android\app\build\outputs\apk\release\app-release.apk";
@@ -29,11 +30,22 @@ if('Release' -eq $Type){
 
     tns build android --release --key-store-path $KeyStore --key-store-password $Key --key-store-alias $Alias --key-store-alias-password $Key
     try {
-        Copy-Item "$APK" -Destination "$PSScriptRoot\dist\destiny.release.$FinalBuildNumber.apk"
+        Copy-Item "$APK" -Destination "$PSScriptRoot\dist\destiny.release.$FinalBuildNumber.apk";
+        try {
+            git add .
+            git commit -m "Build: $($FinalBuildNumber)"
+            git tag -a v$FinalBuildNumber -m "Build: $($FinalBuildNumber)"
+            git push
+        }
+        catch {
+
+        }
     }
     catch {
      Write-Error "The artifact is missing" -ErrorAction:Stop;
     }
+} else {
+    tns build android;
 }
 
 #keytool -genkey -v -keystore <my-release-key>.keystore -alias <alias_name> -keyalg RSA -keysize 2048 -validity 10000
