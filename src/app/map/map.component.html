@@ -7,27 +7,97 @@
   </ActionBar>
   <ScrollView orientation="vertical">
     <StackLayout>
-      <GridLayout columns="auto,auto" rows="auto" horizontalAlignment="center" verticalAlignment="top"
-        backgroundColor="lightgray">
-        <Image row="0" col="0" left="10" top="10" src="~/images/stanger_location.png"></Image>
-        <Image row="0" col="1" left="410" top="10" src="~/images/swakopmund_location.png"></Image>
+      <Image  src="~/images/stanger_location.png"></Image>
+      <GridLayout
+      columns="auto,auto,auto"
+      rows="auto"
+      style="background-color: #fff;">
+      <GridLayout
+        style="margin-left: 20px;"
+        row="0"
+        col="0"
+        rows="auto,auto"
+        columns="auto"
+        width="100">
+        <Image src="~/images/phone.png" ></Image>
+        <Label row="1" col="0" style="font-size: 10px; color: black;" text="Tel: 067 150 3996"></Label>
       </GridLayout>
-      <Label text="Stanger"></Label>
+      <GridLayout
+        style="margin-left: 10px;"
+        row="0"
+        col="1"
+        rows="auto,auto"
+        columns="auto"
+        width="100">
+        <Image  src="~/images/location.png"></Image>
+        <Label
+          style="font-size: 10px; color: black;"
+          row="1"
+          col="0"
+          textWrap="true"
+          text="3 GLEDHOW MILL ROAD,
+STANGER EXT 23,
+KWADUKUZA,
+STANGER,
+KWA-ZULU NATAL
+4449"></Label>
+      </GridLayout>
+      <GridLayout
+        style="margin-left: 10px; width: 400px;"
+        row="0"
+        col="2"
+        rows="auto,auto"
+        columns="auto"
+        width="100">
+        <Image src="~/images/envelope.png"></Image>
+        <Label row="1" col="0"  style="font-size: 10px; color: black;" text="info@destinylife.co.za"></Label>
+      </GridLayout>
+    </GridLayout>
       <maps:mapView [zoom]="16" height="300"  [latitude]="-29.354363" [longitude]="31.292114" (mapReady)="onMapReady($event)" />
-      <Label text="Swakopmund"></Label>
-      <GridLayout columns="auto,auto,auto" rows="auto" horizontalAlignment="center" verticalAlignment="top"
-        backgroundColor="lightgray">
-        <GridLayout row="0" col="0" rows="auto,auto" columns="auto" width="100">
-          <Image src="font://&#xf002;" class="fas t-36"></Image>
-          <Label row="1" col="0" text="Tel: 081 224 9597"></Label>
+
+      <Image row="0" col="1" left="410" top="10" src="~/images/swakopmund_location.png"></Image>
+      <GridLayout
+        columns="auto,auto,auto"
+        rows="auto"
+        style="background-color: #fff;">
+        <GridLayout
+          style="margin-left: 20px;"
+          row="0"
+          col="0"
+          rows="auto,auto"
+          columns="auto"
+          width="100">
+          <Image src="~/images/phone.png" ></Image>
+          <Label row="1" col="0" style="font-size: 10px; color: black;" text="Tel: 081 224 9597"></Label>
         </GridLayout>
-        <GridLayout row="0" col="1" rows="auto,auto" columns="auto" width="100">
-          <Image src="font://&#xf002;" class="fas t-36"></Image>
-          <Label row="1" col="0" textWrap="true" text="MAIN HALL, NAMIB HIGH SCHOOL, LUDERITZ STREET, SWAKOPMUND, NAMIBIA"></Label>
+        <GridLayout
+          style="margin-left: 10px;"
+          row="0"
+          col="1"
+          rows="auto,auto"
+          columns="auto"
+          width="100">
+          <Image  src="~/images/location.png"></Image>
+          <Label
+            style="font-size: 10px; color: black;"
+            row="1"
+            col="0"
+            textWrap="true"
+            text="MAIN HALL,
+NAMIB HIGH SCHOOL,
+LUDERITZ STREET,
+SWAKOPMUND,
+NAMIBIA"></Label>
         </GridLayout>
-        <GridLayout row="0" col="2" rows="auto,auto" columns="auto" width="100">
-          <Image src="font://&#xf002;" class="fas t-36"></Image>
-          <Label row="1" col="0" text="info@destinylife.co.za"></Label>
+        <GridLayout
+          style="margin-left: 10px; width: 400px;"
+          row="0"
+          col="2"
+          rows="auto,auto"
+          columns="auto"
+          width="100">
+          <Image src="~/images/envelope.png"></Image>
+          <Label row="1" col="0"  style="font-size: 10px; color: black;" text="info@destinylife.co.za"></Label>
         </GridLayout>
       </GridLayout>
       <maps:mapView [zoom]="16" height="300"  [latitude]="-22.6763716" [longitude]="14.5295199" (mapReady)="onMapReady($event)" />
