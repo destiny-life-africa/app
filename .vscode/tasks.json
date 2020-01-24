@@ -1,0 +1,26 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Build Release",
+        "type": "shell",
+        "command": "powershell.exe",
+        "presentation": {
+          "reveal": "always",
+          "echo": true
+        },
+        "args": [
+          "-ExecutionPolicy",
+          "Unrestricted",
+          "-NoProfile",
+          "-File",
+          "${cwd}/build.ps1 -Type 'Release' "
+        ],
+        "problemMatcher": [
+          "$msCompile"
+        ]
+      }
+    ]
+}

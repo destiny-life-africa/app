@@ -36,9 +36,10 @@ if('Release' -eq $Type){
             git commit -m "Build: $($FinalBuildNumber)"
             git tag -a v$FinalBuildNumber -m "Build: $($FinalBuildNumber)"
             git push
+            git push --tags
         }
         catch {
-
+            Write-Error "Issue committing the changes to the repository." -ErrorAction:Stop;
         }
     }
     catch {
