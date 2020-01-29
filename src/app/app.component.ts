@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 const firebase = require("nativescript-plugin-firebase");
+const dialogs = require("ui/dialogs");
 @Component({
     selector: "ns-app",
     templateUrl: "app.component.html"
@@ -24,6 +25,11 @@ export class AppComponent implements OnInit {
                 console.log(`Body: ${message.body}`);
                 // if your server passed a custom property called 'foo', then do this:
                 console.log(`Value of 'foo': ${message.data.foo}`);
+                dialogs.alert({
+                    title: "Push message: " + (message.title !== undefined ? message.title : ""),
+                    message: JSON.stringify(message),
+                    okButtonText: "W00t!"
+                  });
               }
           }).then(
             () => {
