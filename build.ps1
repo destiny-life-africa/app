@@ -6,7 +6,7 @@ param(
 )
 
 $Key = $Env:CHURCH;
-tns platform clean android;
+#tns platform clean android;
 if('Release' -eq $Type){
     $Path = "$PSScriptRoot\App_Resources\Android\src\main\AndroidManifest.xml";
     $APK = "$PSScriptRoot\platforms\android\app\build\outputs\apk\release\app-release.apk";
